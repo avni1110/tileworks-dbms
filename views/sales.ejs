@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sales Summary</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <h1>Sales Summary</h1>
+  <table>
+    <tr>
+      <th>Product_Id</th>
+      <th>Product_name</th>
+      <th>Color</th>
+      <th>Total Qty</th>
+      <th>Price</th>
+      <th>Amount</th>
+    </tr>
+    <% sales.forEach(s => { %>
+      <tr>
+        <td><%= s.Product_Id %></td>
+        <td><%= s.Product_name %></td>
+        <td><%= s.color %></td>
+        <td><%= s.total_qty %></td>
+        <td><%= s.price %></td>
+        <td><%= s.amount %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

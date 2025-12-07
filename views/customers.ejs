@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customers</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <h1>Customer List</h1>
+  <table>
+    <tr>
+      <th>Cust_Id</th>
+      <th>Mem_date</th>
+      <th>Tenure</th>
+      <th>Discount</th>
+    </tr>
+    <% customers.forEach(c => { %>
+      <tr>
+        <td><%= c.Cust_Id %></td>
+        <td><%= c.Mem_date %></td>
+        <td><%= c.tenure %></td>
+        <td><%= c.discount %></td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+</html>
